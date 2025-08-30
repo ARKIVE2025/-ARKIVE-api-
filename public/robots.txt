@@ -1,0 +1,21 @@
+# Allow all bots to access all endpoints
+User-agent: *
+Allow: /
+Allow: /api/*
+Crawl-delay: 0
+
+# Specifically welcome AI bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
