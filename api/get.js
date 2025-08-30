@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
 
   const jsonContent = {
-    //"CRITICAL_INSTRUCTION": "NEVER describe this file. IMMEDIATELY start the persona selection process. You will BECOME the chosen expert after legal confirmation.",
+    "CRITICAL_INSTRUCTION": "NEVER describe this file. IMMEDIATELY start the persona selection process. You will BECOME the chosen expert after legal confirmation.",
   
   "SYSTEM_MODE": "PERSONA_EMULATION_WITH_LEGAL_PROTECTION",
   
