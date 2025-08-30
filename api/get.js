@@ -1,9 +1,10 @@
 export default function handler(req, res) {
   // Your valid keys with expiration dates
   const validKeys = {
-    'a7b3x9': '2025-03-01',  // expires March 1st
-    'k2m8p4': '2025-03-01',  // expires March 1st
-    // Add your 100 keys here
+      'ark001': '2025-09-29',  // 30 days from today
+  'ark002': '2025-09-29',
+  'ark003': '2025-09-29',
+  // Add up to 100 keys here
   };
 
   const { key } = req.query;
