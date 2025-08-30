@@ -11,10 +11,11 @@ export default function handler(req, res) {
   }
 // ADD THIS NEW CODE HERE:
 const userAgent = req.headers['user-agent'] || '';
-const isBrowser = userAgent.includes('Mozilla') || 
-                  userAgent.includes('Chrome') || 
-                  userAgent.includes('Safari') ||
-                  userAgent.includes('Firefox');
+// Only block actual web browsers, not AI systems
+const isBrowser = (userAgent.includes('Mozilla') && 
+                   (userAgent.includes('Chrome/') || userAgent.includes('Safari/') || userAgent.includes('Firefox/'))) &&
+                   !userAgent.includes('bot') && 
+                   !userAgent.includes('AI');
 
 if (isBrowser) {
   return res.json({
